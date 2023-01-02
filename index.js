@@ -37,7 +37,7 @@ app.get('/', function(req, res) {
 });
 
 // Your first API endpoint
-app.post('/api/shorturl', function(req, res) {
+app.post('/shorturl', function(req, res) {
   console.log(uid.seq())
   console.log(req.body)
   inputurl = req.body.url;
