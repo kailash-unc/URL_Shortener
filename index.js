@@ -66,7 +66,7 @@ app.post('/api/shorturl', function(req, res) {
   });
 });
 
-app.get('/api/shorturl/:id', function(req, res) {
+app.get('/:id', function(req, res) {
   const id = req.params.id;
   Url.findOne({short_url: id}, function(err, data) {
     if (!data) {
