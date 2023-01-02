@@ -7,6 +7,10 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
+  "engines" : { 
+    "npm" : ">=8.0.0 <9.0.0",
+    "node" : ">=16.0.0 <17.0.0"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -16,6 +20,18 @@
     "mongoose": "^5.10.0",
     "short-unique-id": "^4.4.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kailash-unc/URL_Shortener.git"
+  },
+  "homepage": "https://github.com/kailash-unc/URL_Shortener#readme",
+  "author": "Kailash Muthu",
+  "keywords": [
+    "node",
+    "express",
+    "mongodb",
+    "mongoose"
+  ],
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.4"
