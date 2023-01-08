@@ -1,46 +1,66 @@
-body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: #222;
-  background-color: #fff;
-  text-align: center;
-  line-height: 1.4em;
-}
-
-main {
+body{ 
+  margin: 0;
   padding: 0;
-  margin-top: 40px;
-}
-
-h3 {
-  margin-top: 30px;
-}
-
-
-
-.user-stories li {
-  margin-bottom: 1em;
-}
-
-a {
-  color: #2574a9;
-}
-
-form {
-  margin: 10px auto;
-  padding: 20px;
-  max-width: 600px;
-}
-
-label {
-  margin-right: 10px;
-}
-
-input {
-  padding: 5px;
-}
-
-input[type='text'] {
-  width: 220px;
+  background-size: 100%, 100%;
   text-align: center;
+  font-family: 'Montserrat';
+}
+
+h1{
+  font-size: 70px;
+  font-weight: lighter;
+}
+
+h2{
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.result{
+  margin-top: 350px;
+}
+
+.search-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #000;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.search-box:hover > .search-txt{
+  width: 260px;
+  padding: 0 6px;   	
+}
+.search-box:hover > .search-btn{
+  color: black;
+  background: white;
+  transition: 0.4s;
+}
+.search-btn{
+  color: white;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000; 
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.search-txt{
+  border:none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white; 
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
 }

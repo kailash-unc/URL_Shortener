@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 
 <html>
   <head>
@@ -29,4 +29,47 @@
       <p>Use briefurl.live/&#60;yourshorturlcode&#62;</p>
     </footer>
   </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Brief URL</title>
+  <meta charset="UTF-8">
+  <title>Search bar</title>
+  <link
+      rel="icon"
+      type="image/png"
+      href="https://i.postimg.cc/8CmG86KG/briefurlicon.png"
+    />
+  <link href="/public/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/9e69b114a1.js" crossorigin="anonymous"></script>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+
+</head>
+
+<body>
+  <div>
+    <h1>Brief URL</h1>
+    <h2>URL Shortner</h2>
+  </div>
+
+  <form id="urlform" action="shorturl" autocomplete="off" method="POST">
+    <div class="search-box">
+      <input class="search-txt" type="text" name="url" placeholder="https://">
+      <a class="search-btn" onclick="document.getElementById('urlform').submit();">
+        <i class="fa-solid fa-minimize"></i>
+      </a>
+    </div>
+  </form>
+
+
+  <div class="result">
+    <h2>Use briefurl.live/&#60;yourshorturlcode&#62;</h2>
+  </div>
+
+</body>
+
 </html>
