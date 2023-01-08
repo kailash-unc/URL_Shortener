@@ -46,7 +46,7 @@
   <link href="/public/style.css" rel="stylesheet" type="text/css" />
   <script src="https://kit.fontawesome.com/9e69b114a1.js" crossorigin="anonymous"></script>
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-
+  
 
 </head>
 
@@ -56,7 +56,7 @@
     <h2>URL Shortner</h2>
   </div>
 
-  <form id="urlform" action="shorturl" autocomplete="off" method="POST">
+  <form id="urlform" action="/" autocomplete="off" method="POST">
     <div class="search-box">
       <input class="search-txt" type="text" name="url" placeholder="https://">
       <a class="search-btn" onclick="document.getElementById('urlform').submit();">
@@ -68,6 +68,18 @@
 
   <div class="result">
     <h2>Use briefurl.live/&#60;yourshorturlcode&#62;</h2>
+
+    <div>
+      <% if (link == "Invalid URL") { %>
+        <p class = "incorrecturl">Invalid URL Entered</p>
+      <% } else { %>
+        <a href="/<%=shortcode%>"><%=link%></a>
+      <% } %>
+
+      
+    
+    </div>
+
   </div>
 
 </body>

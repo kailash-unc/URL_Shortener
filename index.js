@@ -10,8 +10,8 @@ const uid = new ShortUniqueId();
 const app = express();
 
 mongoose.connect(process.env['MONGO_URI'], { useNewUrlParser: true, useUnifiedTopology: true });
-
-app.use(bodyParser.urlencoded({ extended: false }));
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Basic Configuration
@@ -33,17 +33,24 @@ app.use(cors());
 app.use('/public', express.static(`${process.cwd()}/public`));
 
 app.get('/', function(req, res) {
-  res.sendFile(process.cwd() + '/views/index.html');
+  var name = 'hello';
+  // res.render('index', {myvalue:""});
+  res.render('index', {link: "", shortcode: ""});
+
 });
 
 // Your first API endpoint
-app.post('/shorturl', function(req, res) {
+app.post('/', function(req, res) {
   console.log(uid.seq())
   console.log(req.body)
   inputurl = req.body.url;
   dns.lookup(urlParser.parse(inputurl).hostname, (err, addr) => {
     if (!addr) {
-      res.json({ error: "Invalid URL" });
+      // res.json({ error: "Invalid URL" });
+      
+      // res.render('index', {myvalue: "Invalid URL"});
+      res.render('index', {link: "Invalid URL", shortcode: ""});
+
     }
     else {
       Url.findOne({ original_url: inputurl }, function(err, existingdata) {
@@ -52,12 +59,17 @@ app.post('/shorturl', function(req, res) {
 
           const url = new Url({ original_url: inputurl, short_url: uid()})
           url.save(function(err, data) {
-            res.json({ original_url: data.original_url, short_url: data.short_url})
+            // res.json({ original_url: data.original_url, short_url: data.short_url})
+            res.render('index', {link: "briefurl.live/"+ data.short_url, shortcode: data.short_url});
             if (err) return console.error(err);
           });
         }
         else {
-          res.json({ original_url: existingdata.original_url, short_url: existingdata.short_url})
+          // res.json({ original_url: existingdata.original_url, short_url: existingdata.short_url})
+          res.render('index', {link: "briefurl.live/"+ existingdata.short_url, shortcode: existingdata.short_url});
+
+          // res.render('index', {myvalue: existingdata.short_url});
+
         }
 
       });
