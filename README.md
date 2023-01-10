@@ -2,6 +2,8 @@
 
 Made with: Node.js, Express.js, Mongoose, MongoDB
 
+Visit the project at https://www.briefurl.live/
+
 ## Installation
 
 All packages and included in package.json. To install, run the following command.
@@ -10,8 +12,17 @@ All packages and included in package.json. To install, run the following command
 npm install
 ```
 
+## Usage
 
-Visit the project at https://www.briefurl.live/
+To run locally, run the following command
+
+```bash
+npm start
+```
+
+Defaults to localhost:3000
+
+Choose your post by create .env PORT variable and assign your PORT
 
 
 
