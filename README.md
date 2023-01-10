@@ -1,6 +1,8 @@
-# BriefURL.live | URL Shortener
+# URL Shortener | BriefURL.live
 
-Made with: Node.js, Express.js, Mongoose, MongoDB
+An application that takes a long URL and creates a shorter, more manageable version that redirects to the original link. 
+
+Made with: __Node.js, Express.js, Mongoose, MongoDB__
 
 Visit the project at https://www.briefurl.live/
 
@@ -36,8 +38,8 @@ Choose your port by creating .env PORT variable
 [MIT](https://choosealicense.com/licenses/mit/)
 
 
-
+<!-- 
 • DevelopedaURLShortenerapplicationusingNode.jsand Express.js, handling all routing and implementing a scalable URL shortening system
 • UsedMongoDBandMongoosetostoreandmanagedataforthe application
-• Generatedunique,6-characteridentifiers(UUIDs)usinga 62-character bank, to designate the shortened URL: https://github.com/simplyhexagonal/short-unique-id
+• Generatedunique,6-characteridentifiers(UUIDs)usinga 62-character bank, to designate the shortened URL: https://github.com/simplyhexagonal/short-unique-id -->
 
