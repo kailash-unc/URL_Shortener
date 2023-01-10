@@ -2,7 +2,18 @@
 
 Made with: Node.js, Express.js, Mongoose, MongoDB
 
+## Installation
+
+All packages and included in package.json. To install, run the following command.
+
+```bash
+npm install
+```
+
+
 Visit the project at https://www.briefurl.live/
+
+
 
 • DevelopedaURLShortenerapplicationusingNode.jsand Express.js, handling all routing and implementing a scalable URL shortening system
 • UsedMongoDBandMongoosetostoreandmanagedataforthe application
